@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  navigation:
+    container_name: navigation-app
+    restart: always
+    build:
+      context: ./navigation-app/
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules
+  home:
+    container_name: home-app
+    build:
+      context: ./home-app/
+      dockerfile: Dockerfile.dev
+    restart: always
+    volumes:
+      - ./:/app
+      - /app/node_modules

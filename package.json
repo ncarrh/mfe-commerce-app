@@ -1,0 +1,13 @@
+{
+  "name": "mfe-commerce-app",
+  "version": "1.0.0",
+  "description": "mfe with next js",
+  "main": "index.js",
+  "repository": "git@github.com:ncarrh/mfe-commerce-app.git",
+  "author": "nicocarrenoh <ncarrenoh@ripley.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "compose-up": "docker-compose up -d --build"
+  }
+}
