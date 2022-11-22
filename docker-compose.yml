@@ -7,15 +7,19 @@ services:
     build:
       context: ./navigation-app/
       dockerfile: Dockerfile.dev
+    ports:
+      - "9000:3000"
     volumes:
-      - ./:/app
-      - /app/node_modules
+      - ./navigation-app/:/nav-app
+      - /nav-app/node_modules
   home:
     container_name: home-app
     build:
       context: ./home-app/
       dockerfile: Dockerfile.dev
+    ports:
+      - "4000:3000"
     restart: always
     volumes:
-      - ./:/app
-      - /app/node_modules
+      - ./home-app/:/home-app
+      - /home-app/node_modules
